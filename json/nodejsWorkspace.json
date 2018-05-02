@@ -1,0 +1,117 @@
+{
+  "defaultEnv": "default",
+  "environments": {
+    "default": {
+      "machines": {
+        "dev-machine": {
+          "attributes": {
+            "memoryLimitBytes": "3221225472"
+          },
+          "servers": {
+            "5000/tcp": {
+              "attributes": {},
+              "port": "5000",
+              "protocol": "http"
+            },
+            "3000/tcp": {
+              "attributes": {},
+              "port": "3000",
+              "protocol": "http"
+            },
+            "4200/tcp": {
+              "attributes": {},
+              "port": "4200",
+              "protocol": "http"
+            },
+            "9000/tcp": {
+              "attributes": {},
+              "port": "9000",
+              "protocol": "http"
+            }
+          },
+          "volumes": {},
+          "installers": [
+            "org.eclipse.che.exec",
+            "org.eclipse.che.terminal",
+            "org.eclipse.che.ws-agent"
+          ],
+          "env": {}
+        }
+      },
+      "recipe": {
+        "type": "dockerimage",
+        "content": "eclipse/node"
+      }
+    }
+  },
+  "projects": [
+    {
+      "links": [],
+      "name": "Hands-On-Full-Stack-Development-with-Angular-5-and-Firebase",
+      "attributes": {
+        "commands": [
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && npm start\", \"name\":\"runFriends\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}"
+        ]
+      },
+      "type": "blank",
+      "source": {
+        "location": "https://github.com/PacktPublishing/Hands-On-Full-Stack-Development-with-Angular-5-and-Firebase.git",
+        "type": "github",
+        "parameters": {}
+      },
+      "path": "/Hands-On-Full-Stack-Development-with-Angular-5-and-Firebase",
+      "problems": [],
+      "mixins": []
+    },
+    {
+      "links": [],
+      "name": "friends",
+      "attributes": {
+        "commands": [
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && npm start\", \"name\":\"runFriends\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}"
+        ]
+      },
+      "type": "blank",
+      "source": {
+        "parameters": {}
+      },
+      "path": "/friends",
+      "problems": [],
+      "mixins": []
+    },
+    {
+      "links": [],
+      "name": "node_modules",
+      "attributes": {
+        "commands": [
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && npm start\", \"name\":\"runFriends\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}"
+        ]
+      },
+      "type": "blank",
+      "source": {
+        "parameters": {}
+      },
+      "path": "/node_modules",
+      "problems": [],
+      "mixins": []
+    },
+    {
+      "links": [],
+      "name": "node_workspace",
+      "attributes": {},
+      "type": "blank",
+      "source": {
+        "location": "",
+        "type": "",
+        "parameters": {}
+      },
+      "path": "/node_workspace",
+      "description": "Contains the json definition of my nodejs workspace",
+      "problems": [],
+      "mixins": []
+    }
+  ],
+  "name": "wksp-nodejs",
+  "commands": [],
+  "links": []
+}
