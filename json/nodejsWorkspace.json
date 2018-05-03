@@ -50,7 +50,9 @@
       "name": "Hands-On-Full-Stack-Development-with-Angular-5-and-Firebase",
       "attributes": {
         "commands": [
-          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && npm start\", \"name\":\"runFriends\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}"
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path}/src/app && ng g module cation --routing\", \"name\":\"create a module\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"\"}, \"type\":\"custom\"}",
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng set defaults.styleExt scss\", \"name\":\"convertToSass\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}",
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng test --app landing-page\", \"name\":\"testWebDesigner\", \"attributes\":{\"goal\":\"Test\", \"previewUrl\":\"\"}, \"type\":\"custom\"}"
         ]
       },
       "type": "blank",
@@ -65,10 +67,31 @@
     },
     {
       "links": [],
+      "name": "web-designer",
+      "attributes": {
+        "commands": [
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && npm start\", \"name\":\"runWebDesigner\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}",
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng test --app landing-page\", \"name\":\"testWebDesigner\", \"attributes\":{\"goal\":\"Test\", \"previewUrl\":\"\"}, \"type\":\"custom\"}"
+        ]
+      },
+      "type": "blank",
+      "source": {
+        "location": "https://usajlev@irepo.eur.ad.sag/scm/wd/web-designer.git",
+        "type": "git",
+        "parameters": {}
+      },
+      "path": "/web-designer",
+      "problems": [],
+      "mixins": []
+    },
+    {
+      "links": [],
       "name": "friends",
       "attributes": {
         "commands": [
-          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && npm start\", \"name\":\"runFriends\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}"
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path}/src/app && ng g module cation --routing\", \"name\":\"create a module\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"\"}, \"type\":\"custom\"}",
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng set defaults.styleExt scss\", \"name\":\"convertToSass\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}",
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng test --app landing-page\", \"name\":\"testWebDesigner\", \"attributes\":{\"goal\":\"Test\", \"previewUrl\":\"\"}, \"type\":\"custom\"}"
         ]
       },
       "type": "blank",
@@ -81,24 +104,12 @@
     },
     {
       "links": [],
-      "name": "node_modules",
+      "name": "node_workspace",
       "attributes": {
         "commands": [
-          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && npm start\", \"name\":\"runFriends\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}"
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng test --app landing-page\", \"name\":\"testWebDesigner\", \"attributes\":{\"goal\":\"Test\", \"previewUrl\":\"\"}, \"type\":\"custom\"}"
         ]
       },
-      "type": "blank",
-      "source": {
-        "parameters": {}
-      },
-      "path": "/node_modules",
-      "problems": [],
-      "mixins": []
-    },
-    {
-      "links": [],
-      "name": "node_workspace",
-      "attributes": {},
       "type": "blank",
       "source": {
         "location": "",
@@ -107,6 +118,24 @@
       },
       "path": "/node_workspace",
       "description": "Contains the json definition of my nodejs workspace",
+      "problems": [],
+      "mixins": []
+    },
+    {
+      "links": [],
+      "name": "node_modules",
+      "attributes": {
+        "commands": [
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path}/src/app && ng g module cation --routing\", \"name\":\"create a module\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"\"}, \"type\":\"custom\"}",
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng set defaults.styleExt scss\", \"name\":\"convertToSass\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.4200/tcp}\"}, \"type\":\"custom\"}",
+          "{\"commandLine\":\"export PATH=$PATH:/projects/node_modules/.bin && cd  ${current.project.path} && ng test --app landing-page\", \"name\":\"testWebDesigner\", \"attributes\":{\"goal\":\"Test\", \"previewUrl\":\"\"}, \"type\":\"custom\"}"
+        ]
+      },
+      "type": "blank",
+      "source": {
+        "parameters": {}
+      },
+      "path": "/node_modules",
       "problems": [],
       "mixins": []
     }
